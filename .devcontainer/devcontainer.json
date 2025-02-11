@@ -6,8 +6,8 @@
     "shutdownAction": "stopCompose",
     "forwardPorts": [80],
     "features": {
-      "ghrc.io/devcontainer/features/github-cli": "1",
-      "ghrc.io/devcontainer/features/docker-in-docker": {
+      "ghrc.io/devcontainers/features/github-cli": "1",
+      "ghrc.io/devcontainers/features/docker-in-docker": {
         "version": "latest",
         "enableNonRootDocker": true,
         "moby": true
