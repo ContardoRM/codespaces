@@ -12,6 +12,12 @@ RUN apt-get update && apt-get install -y \
     gnupg2 \
     apt-transport-https
 
+# Instalar Composer globalmente
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
+    php -r "unlink('composer-setup.php');"
+
+
 # En lugar de importar la clave y usar el archivo de Microsoft,
 # creamos una entrada en sources.list marcando el repositorio como confiable.
 RUN echo "deb [trusted=yes] https://packages.microsoft.com/debian/12/prod bookworm main" > /etc/apt/sources.list.d/mssql-release.list && \
