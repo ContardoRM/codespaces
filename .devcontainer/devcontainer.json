@@ -6,12 +6,12 @@
     "shutdownAction": "stopCompose",
     "forwardPorts": [80],
     "features": {
-      "ghrc.io/devcontainers/features/github-cli": "1",
-      "ghrc.io/devcontainers/features/docker-in-docker": {
+      "ghcr.io/devcontainers/features/github-cli": "1",
+      "ghcr.io/devcontainers/features/docker-in-docker": {
         "version": "latest",
         "enableNonRootDocker": true,
         "moby": true
       }
     },
     "postCreateCommand": "composer install && php artisan key:generate"
-  }
+}
